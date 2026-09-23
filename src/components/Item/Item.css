@@ -1,0 +1,22 @@
+.product-image{
+    width: 50px;
+    height: 75px;
+    border-radius: 5px;
+}
+
+.author{
+    font-style: italic
+}
+
+.author:hover{
+    color: #6a855f
+}
+
+.title{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.title:hover{
+    color: #6a855f;
+}

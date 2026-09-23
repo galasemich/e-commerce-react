@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name": "Harry Potter y el misterio del Príncipe",
+        "author": "J. K. Rowling",
+        "description": "Harry Potter y el misterio del príncipe (título original en inglés: Harry Potter and the Half-Blood Prince) es el sexto libro de la serie literaria Harry Potter escrito por la autora británica J. K. Rowling y publicado por primera vez, en inglés, el 16 de julio de 2005",
+        "category": "novela fantástica",
+        "price": 45000,
+        "stock": 1,
+        "image": "/img/hp6.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Casa de Hojas",
+        "author": "Mark Z. Danielewski",
+        "description": "Determinados críticos han definido la obra como una «novela total», en el sentido de que el libro contiene todo lo que en él se refiere; efectivamente, además de la propia historia, numerosos pasajes contienen referencias a la arquitectura, la física, las matemáticas, la psicología, la fotografía, el cine, la literatura, la filología o la filosofía.",
+        "category": "terror",
+        "price": 70000,
+        "stock": 3,
+        "image": "/img/house_of_leaves.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Fluyan mis lágrimas, dijo el policía",
+        "author": "Philip K. Dick",
+        "description": "La novela se ambienta en una versión distópica de 1988, tras una Segunda Guerra Civil que provocó el colapso de las instituciones democráticas de Estados Unidos.",
+        "category": "ciencia ficción",
+        "price": 35000,
+        "stock": 5,
+        "image": "/img/flow_my_tears.jpg"
+    },
+    {
+        "id": 4,
+        "name": "22/11/63",
+        "author": "Stephen King",
+        "description": "22/11/63 (en inglés: 11/22/63) es una novela de suspense y ciencia ficción del escritor estadounidense Stephen King que narra la historia de Jacob Epping, un viajero en el tiempo que intenta evitar el asesinato del presidente John F. Kennedy, cuya fecha —el 22 de noviembre de 1963— inspiró el título del libro.",
+        "category": "ciencia ficción",
+        "price": 70000,
+        "stock": 2,
+        "image": "/img/11-22-63.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Poesía completa",
+        "author": "Emily Dickinson",
+        "description": "Emily Elizabeth Dickinson (Amherst, Massachusetts, 10 de diciembre de 1830-ibidem, 15 de mayo de 1886) fue una poeta estadounidense,[1] su poesía apasionada la ha colocado en el reducido panteón de poetas fundamentales estadounidenses junto a Edgar Allan Poe, Ralph Waldo Emerson y Walt Whitman.",
+        "category": "poesía",
+        "price": 80000,
+        "stock": 10,
+        "image": "/img/emily_dickinson.jpg"
+    }
+]

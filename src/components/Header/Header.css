@@ -1,0 +1,19 @@
+.header{
+    background-color: wheat;
+    padding: 10px;
+    color: white;
+    align-items: center;
+}
+
+.header li{
+    margin: 20px;
+    display: inline;
+}
+
+.navbar{
+    text-align: center;
+}
+
+.header li:hover{
+    background-color: #6a855f;
+}
