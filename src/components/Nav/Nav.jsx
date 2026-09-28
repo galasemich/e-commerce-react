@@ -9,12 +9,6 @@ export const Nav = () => {
                     <Link to={"/"}>Inicio</Link>
                 </li>
                 <li>
-                    <Link to={"/products"}>Libros</Link>
-                </li>
-                <li>
-                    <Link to={"/cart"}>Tu carrito</Link>
-                </li>
-                <li>
                     <Link to={"/category/scifi"}>Ciencia ficción</Link>
                 </li>
                 <li>
@@ -25,6 +19,9 @@ export const Nav = () => {
                 </li>
                 <li>
                     <Link to={"/category/fantasía"}>Fantasía</Link>
+                </li>
+                <li>
+                    <Link to={"/cart"}>Tu carrito</Link>
                 </li>
             </ul>
         </nav>
