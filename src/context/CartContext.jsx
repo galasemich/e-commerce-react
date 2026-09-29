@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const CartContext = createContext()
@@ -13,7 +12,7 @@ export const useCart = () => {
 }
 
 export const CartProvider = ({ children }) => {
-    const [ cart, setCart ] = useState()
+    const [ cart, setCart ] = useState([])
     const navigate = useNavigate()
 
     const itemInCart = (product) => {
