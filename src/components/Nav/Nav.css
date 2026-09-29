@@ -19,3 +19,10 @@
 .nav ul{
     padding-left: 0;
 }
+
+.total-cart{
+    background-color: #6a855f;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bolder;
+}
