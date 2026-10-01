@@ -5,11 +5,13 @@
 }
 
 .author{
-    font-style: italic
+    font-style: italic;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .author:hover{
-    color: #6a855f
+    color: #6a855f;
 }
 
 .title{

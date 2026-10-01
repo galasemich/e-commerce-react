@@ -14,9 +14,8 @@ export const AddToCart = ({ item }) => {
             <p>Unidades: {quantity}</p>
             <button onClick={increaseQuantity} className="generic-button">+</button>
             <button onClick={decreaseQuantity} className="generic-button" disabled={quantity === 1}>-</button>
+            <button onClick={() => addItem(item, quantity)} className="generic-button">Agregar al carrito</button>
         </div>
-
-        <button onClick={() => addItem(item, quantity)} className="generic-button">Agregar al carrito</button>
     </div>
     )
 }

@@ -9,11 +9,6 @@ background-color: #6a855f;
 text-align: center
 }
 
-.favourite-button{
-  border-radius: 10px;
-  cursor: pointer
-}
-
 .generic-button{
   background-color: #6a855f;
   border-radius: 10px;
@@ -21,7 +16,9 @@ text-align: center
 }
 
 .product-card{
-  width: 150px;
+  width: fit-content;
+  min-width: 200px;
+  max-width: 600px;
   border: 1px solid #5a5a5a;
   border-radius: 10px;
   overflow: hidden;
@@ -39,7 +36,6 @@ text-align: center
   justify-content: center; 
   align-items: center;  
   gap: 10px;
-  flex-wrap: wrap;
 }
 
 h1, h2, h3, p {
