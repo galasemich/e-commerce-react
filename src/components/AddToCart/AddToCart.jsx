@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useCart } from "../../context/CartContext"
 
 export const AddToCart = ({ item }) => {
-    const [ quantity, setQuantity ] = useState(0)
+    const [ quantity, setQuantity ] = useState(1)
     const { addItem } = useCart()
 
     const increaseQuantity = () => {setQuantity(quantity + 1)}
