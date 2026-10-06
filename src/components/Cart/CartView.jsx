@@ -10,7 +10,7 @@ export const CartView = () => {
     return (
         <section>
             <h1>Tu carrito de compras</h1>
-            <div className="cart-table">
+            <div>
                 {cart.length ? (
                 <>
                 <CartList />
