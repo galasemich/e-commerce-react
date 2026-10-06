@@ -1,5 +1,4 @@
 import { useCart } from "../../context/CartContext"
-import { Item } from "../Item/Item"
 import "./Cart.css"
 
 export const CartItem = ({ product }) => {
@@ -7,6 +6,7 @@ export const CartItem = ({ product }) => {
     return (
         <div className="cart-item">
             <p><img className="product-image" title={product.name} src={product.image}></img></p>
+            <h4>{product.quantity}</h4>
             <h4>{product.name}</h4>
             <h5>{product.author}</h5>
             <h5>${product.price}</h5>

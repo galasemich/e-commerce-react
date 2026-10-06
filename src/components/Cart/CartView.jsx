@@ -9,17 +9,17 @@ export const CartView = () => {
     
     return (
         <section>
-            <h1>Tu carrito de compras</h1>
             <div>
                 {cart.length ? (
                 <>
+                <h1>Tu carrito de compras</h1>
                 <CartList />
                 <CartSummary />
                 </>
                 ) : (
                 <>
                 <h4>Tu carrito está vacío.</h4>
-                <Link className="generic-button" to={"/"}>Volver al inicio</Link>
+                <h4>Navegá por la tienda para agregar libros.</h4>
                 </>)} 
             </div>
         </section>

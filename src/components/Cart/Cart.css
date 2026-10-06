@@ -2,6 +2,10 @@
     background-color: #BD5F40;
 }
 
+.payment-button{
+    background-color: #7274c8;
+}
+
 .cart-container{
     display: inline-flex;
     flex-direction: column;
