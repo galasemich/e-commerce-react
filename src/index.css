@@ -10,10 +10,16 @@ text-align: center
 }
 
 .generic-button{
-  padding: 5px;
+  border: none;
+  padding: 8px;
   background-color: #6a855f;
   border-radius: 10px;
-  cursor: pointer
+  cursor: pointer;
+  font-weight: bolder
+}
+
+.generic-button:hover{
+  opacity: 0.9;
 }
 
 .product-card{

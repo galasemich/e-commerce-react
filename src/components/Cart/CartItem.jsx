@@ -9,7 +9,7 @@ export const CartItem = ({ product }) => {
             <h4>{product.quantity}</h4>
             <h4>{product.name}</h4>
             <h5>{product.author}</h5>
-            <h5>${product.price}</h5>
+            <h5 className="price">${product.price}</h5>
             <button onClick={() => removeItem(product)} className="generic-button delete-button">Eliminar</button>
         </div>
     )

@@ -20,6 +20,7 @@ export const CartView = () => {
                 <>
                 <h4>Tu carrito está vacío.</h4>
                 <h4>Navegá por la tienda para agregar libros.</h4>
+                <Link to={"/"} className="generic-button return-button">Explorar libros</Link>
                 </>)} 
             </div>
         </section>
