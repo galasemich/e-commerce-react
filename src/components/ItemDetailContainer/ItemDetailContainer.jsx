@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { ItemDetail } from "../ItemDetail/ItemDetail"
+import { getProductsByID } from "../../services/productsService"
 
 export const ItemDetailContainer = () => {
     const { id } = useParams()
@@ -9,17 +10,8 @@ export const ItemDetailContainer = () => {
     const [ loading, setLoading ] = useState(true)
 
     useEffect(() => {
-        fetch("/data/products.json")
-        .then(response => response.json())
-        .then((data) => {
-            const item = data.find((item) => item.id === parseInt(id))
-            if (item) {
-                setItemDetail(item)
-                return
-            } else {
-                throw new Error("No se encontró ningún resultado con el ID proporcionado.")
-            }
-        })
+        getProductsByID(id)
+        .then((data) => setItemDetail(data))
         .catch((error) => setError(error.message))
         .finally(() => setLoading(false))
     }, [id])
