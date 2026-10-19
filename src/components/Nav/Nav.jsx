@@ -11,28 +11,16 @@ export const Nav = () => {
         <nav className="nav">
             <ul>
                 <li>
-                    <Link to={"/"}>Inicio</Link>
+                    <Link className="nav-principal" to={"/"}>Inicio</Link>
                 </li>
                 <li className="dropdown">
-                    <a>Libros</a>
+                    <span className="nav-principal">Libros ▼</span>
                     <div className="dropdown-content">
                         <CategoryListContainer/>
                     </div>
                 </li>
-                {/* <li>
-                    <Link to={"/category/scifi"}>Ciencia ficción</Link>
-                </li>
                 <li>
-                    <Link to={"/category/poesía"}>Poesía</Link>
-                </li>
-                <li>
-                    <Link to={"/category/terror"}>Terror</Link>
-                </li>
-                <li>
-                    <Link to={"/category/fantasía"}>Fantasía</Link>
-                </li> */}
-                <li>
-                    <Link to={"/cart"}>Tu carrito {totalItems > 0 && <span className="total-cart">{totalItems}</span>}</Link>
+                    <Link className="nav-principal" to={"/cart"}>Tu carrito {totalItems > 0 && <span className="total-cart">{totalItems}</span>}</Link>
                 </li>
             </ul>
         </nav>

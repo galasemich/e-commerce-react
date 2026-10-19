@@ -8,7 +8,7 @@ export const CategoryList = ({ categories }) => {
         
         return (
             formattedCategories.map((cat) => (
-                <Link to={`/category/${cat}`}>{cat}</Link>
+                <p><Link to={`/category/${cat}`}>{cat}</Link></p>
         ))) 
     }
 }

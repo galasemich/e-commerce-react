@@ -11,7 +11,7 @@ export const CategoryListContainer = () => {
         .then((data) => setCategories(data))
         .catch((error) => setError(error))
     }, [])
-    console.log(categories)
+
     if (error) return <p>Se produjo un error: {error}</p>
     
     return (

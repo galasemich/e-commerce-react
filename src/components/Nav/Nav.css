@@ -1,8 +1,9 @@
 .nav{
     padding: 5px;
+    text-align: left;
 }
 
-.nav a{
+.nav-principal{
     background-color: wheat;
     padding: 12px;
     color: black;
@@ -11,7 +12,7 @@
     text-align: center;
 }
 
-.nav a:hover{
+.nav-principal:hover{
     border-bottom: 2px solid #6a855f;
 }
 
@@ -41,6 +42,7 @@
     top: 100%;
     left: 0;
     z-index: 1;
+    width: fit-content;
 }
 
 .dropdown:hover .dropdown-content {

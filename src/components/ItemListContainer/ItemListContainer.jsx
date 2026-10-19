@@ -29,6 +29,7 @@ export const ItemListContainer = () => {
 
     return (
         <div>
+            {category && <h1>Categoría: {category}</h1>}
             <ItemList products={products}/>
         </div>
     )
