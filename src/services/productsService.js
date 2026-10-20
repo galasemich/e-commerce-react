@@ -10,7 +10,7 @@ export const getProductsByID = async (id) => {
         const snapshot = await getDoc(productRef)
 
         if (snapshot.exists()) {
-            const product = snapshot.data()
+            const product = { id: snapshot.id, ...snapshot.data() }
             return product
         } else {
             return null
@@ -47,7 +47,7 @@ export const getCategories = async () => {
     try {
         const snapshot = await getDocs(categoriesRef)
         const categories = snapshot.docs.map((doc) => {
-            return doc.data()
+            return { id: doc.id, ...doc.data() }
         })
         console.log(categories)
         return categories
