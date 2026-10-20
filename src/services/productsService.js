@@ -1,5 +1,5 @@
 import { db } from "../firebase/config";
-import { collection, getDocs, doc, query, where, getDoc } from "firebase/firestore" 
+import { collection, getDocs, doc, query, where, getDoc, addDoc } from "firebase/firestore" 
 
 const productsRef = collection(db, "products")
 const categoriesRef = collection(db, "categories")
@@ -53,5 +53,16 @@ export const getCategories = async () => {
         return categories
     } catch (error) {
         console.log("Error al traer las categorías:", error)
+    }
+}
+
+export const createProduct = async (product) => {
+    console.log(product)
+    try {
+        const docRef = await addDoc(productsRef, product)
+        return docRef.id
+    } catch (error) {
+        console.log("Se produjo un error al guardar el producto:", error)
+        throw error
     }
 }
