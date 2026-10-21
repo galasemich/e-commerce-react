@@ -3,10 +3,10 @@ box-sizing: content-box;
 }
 
 body {
-font-family: monospace;
-margin: 0;
-background-color: #6a855f;
-text-align: center
+  font-family: monospace;
+  margin: 0;
+  background-color: #6a855f;
+  text-align: center;
 }
 
 .generic-button{

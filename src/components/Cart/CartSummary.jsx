@@ -7,10 +7,10 @@ export const CartSummary = () => {
     const totalItems = getTotalItems()
 
     return (
-        <>
-        <p>Unidades: {totalItems}</p>
-        <p>Total a pagar: ${total}</p>
-        <button onClick={checkout} className="generic-button payment-button">Finalizar compra</button>
-        </>
+        <div className="summary-container">
+            <p>Unidades: {totalItems}</p>
+            <p>Total a pagar: ${total}</p>
+            <button onClick={checkout} className="generic-button payment-button">Finalizar compra</button>
+        </div>
     )
 }

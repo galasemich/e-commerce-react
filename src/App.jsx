@@ -10,18 +10,18 @@ import { ProductFormContainer } from './components/adminComponents/ProductForm/P
 function App() {
   return (
     <>
-    <Header/>
-    <main>
-      <Routes>
-        <Route path="/" element={<ItemListContainer/>}/>
-        <Route path="/product/:id" element={<ItemDetailContainer/>}/>
-        <Route path="/category/:category" element={<ItemListContainer/>}/>
-        <Route path="/cart" element={<CartView/>}/>
-        <Route path="/admin" element={<ProductFormContainer/>}/>
-        <Route path="/admin/product/success/:id" element={<h1>Producto subido con éxito.</h1>}/>
-      </Routes>
-    </main>
-    <Footer/>
+      <Header/>
+      <main>
+          <Routes>
+            <Route path="/" element={<ItemListContainer/>}/>
+            <Route path="/product/:id" element={<ItemDetailContainer/>}/>
+            <Route path="/category/:category" element={<ItemListContainer/>}/>
+            <Route path="/cart" element={<CartView/>}/>
+            <Route path="/admin" element={<ProductFormContainer/>}/>
+            <Route path="/admin/product/success/:id" element={<h1>Producto subido con éxito.</h1>}/>
+          </Routes>
+        </main>
+      <Footer/>
     </>
   )
 }
