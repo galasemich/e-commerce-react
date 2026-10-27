@@ -100,7 +100,7 @@ export const ProductFormContainer = () => {
             setProduct(defaultProduct)
             setFile(null)
             //6. Mostrar mensaje de confirmación (con navigate)
-            navigate(`/admin/product/success/${id}`, { replace: true })
+            navigate(`products/success/${id}`, { replace: true })
         } catch (error) {
             console.log(error)
             setErrors({ general: error.message })
