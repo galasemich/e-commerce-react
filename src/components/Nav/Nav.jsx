@@ -3,7 +3,7 @@ import "./Nav.css"
 import { useCart } from "../../context/CartContext"
 import { CategoryListContainer } from "../CategoryListContainer/CategoryListContainer"
 
-export const Nav = () => {
+export const Nav = () => { 
     const { getTotalItems } = useCart()
     const totalItems = getTotalItems()
 
