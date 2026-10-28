@@ -1,0 +1,67 @@
+.dashboard-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 48rem;
+    margin: 3rem auto;
+    padding: 1.5rem;
+    border: 1px solid #5a5a5a;
+    border-radius: 8px;
+    gap: 16px;
+    background-color: wheat;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+.success-button-container{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-button{
+    background-color: #BD5F40
+}
+
+.edit-button{
+    background-color: #799bf0;
+}
+
+.add-button{
+    background-color: #6a855f;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.add-button:hover{
+  opacity: 0.9;
+}
+
+.dashboard-header-title{
+    font-size: x-large;
+    text-align: left;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.books-quantity{
+    color: #6a855f;
+}

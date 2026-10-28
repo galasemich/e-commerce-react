@@ -8,6 +8,8 @@ import { PublicLayout } from './layout/PublicLayout'
 import { Login } from './components/Login/Login'
 import { ProtectedRoute } from './components/ProtectedRoute/ProtectedRoute'
 import { AdminLayout } from './layout/AdminLayout'
+import { DashboardContainer } from './components/adminComponents/Dashboard/DashboardContainer'
+import { ProductSuccess } from './components/adminComponents/ProductSuccess'
 
 function App() {
   return (
@@ -31,9 +33,9 @@ function App() {
               </ProtectedRoute>
             }>
               <Route index element={<Navigate to={"dashboard"}/>}/>
-              <Route path="dashboard" element={<Dashboard />}/>
+              <Route path="dashboard" element={<DashboardContainer/>}/>
               <Route path="products/new" element={<ProductFormContainer/>}/>
-              <Route path="products/success/:id" element={<h1>Producto subido con éxito.</h1>}/>
+              <Route path="products/success/:id" element={<ProductSuccess/>}/>
             </Route>
           </Routes>
     </>
