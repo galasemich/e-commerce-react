@@ -1,10 +1,13 @@
+import { useParams } from "react-router-dom"
 import "./ProductFormContainer/ProductFormContainer.css"
 
 export const ProductFormUI = ({ product, errors, loading, onChange, onSubmit, onFileChange }) => {
+    const { id } = useParams()
+
     return (
         <section>
             <form className="product-form" onSubmit={onSubmit}>
-                <h2>Agregar un libro</h2>
+                <h2>{id ? "Editar libro" : "Agregar un nuevo libro"}</h2>
 
                 <div>
                     <label>Título:</label>

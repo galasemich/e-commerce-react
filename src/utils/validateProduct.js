@@ -21,7 +21,7 @@ export const validateProduct = (product) => {
         errors.category = "El género del libro es obligatorio."
     }
 
-    if (!product.file) {
+    if (!product.file && !product.image) {
         errors.file = "La imagen para el libro es obligatoria."
     }
 

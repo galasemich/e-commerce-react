@@ -1,13 +1,25 @@
 import { useEffect, useState } from "react"
-import { DashboardProductList } from "./DashboardProductList"
 import { DashboardView } from "./DashboardView"
-import { getProductsByCategory } from "../../../services/productsService"
+import { deleteProduct, getProductsByCategory } from "../../../services/productsService"
 import "./Dashboard.css"
+import { DashboardProduct } from "./DashboardProduct"
 
 export const DashboardContainer = () => {
     const [ products, setProducts ] = useState([])
     const [ errors, setErrors ] = useState(null)
     const [ loading, setLoading ] = useState(true)
+
+    const handleDelete = async (id) => {
+        await deleteProduct(id)
+        getProductsByCategory()
+        .then((data) => setProducts(data))
+        .catch((error) => {
+            setErrors(error.message)
+        })
+        .finally(() => {
+            setLoading(false)
+        })
+    }
 
     useEffect(() => {
         getProductsByCategory()
@@ -28,7 +40,9 @@ export const DashboardContainer = () => {
     return (
         <section className="dashboard-container">
             <DashboardView length={length}/>
-            <DashboardProductList products={products}/>
+            {products.map((product) => (
+                <DashboardProduct {...product} key={product.id} onDelete={handleDelete}/>
+            ))}
         </section>
     )
 }

@@ -14,12 +14,11 @@ export const uploadImage = async (image) => {
         const image = await response.json()
 
         if (!image.success) {
-            throw new Error("No se pudo completar la subida de la imagen.")
+           throw new Error("No se pudo completar la subida de la imagen.")
         }
 
         return image.data.url
     } catch (error) {
         console.log(error)
-        throw error
     }
 }

@@ -35,7 +35,8 @@ function App() {
               <Route index element={<Navigate to={"dashboard"}/>}/>
               <Route path="dashboard" element={<DashboardContainer/>}/>
               <Route path="products/new" element={<ProductFormContainer/>}/>
-              <Route path="products/success/:id" element={<ProductSuccess/>}/>
+              <Route path="products/edit-product/:id" element={<ProductFormContainer/>}/>
+              <Route path="products/success/:action/:id" element={<ProductSuccess/>}/>
             </Route>
           </Routes>
     </>
