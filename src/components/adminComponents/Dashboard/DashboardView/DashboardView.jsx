@@ -1,10 +1,10 @@
 import "./Dashboard.css"
 import "./DashboardView.css"
 import { Link } from "react-router-dom"
-import { useAuth } from "../../../context/AuthContext"
+import { useAuth } from "../../../../context/AuthContext"
 import { useState } from "react"
-import { DashboardProductList } from "./DashboardProductList"
-import { OrdersList } from "./OrdersList"
+import { DashboardProductList } from "../DashboardProductList"
+import { OrdersList } from "../OrdersList"
 
 export const DashboardView = ({ products, orders, onDelete }) => {
     const { logout } = useAuth()

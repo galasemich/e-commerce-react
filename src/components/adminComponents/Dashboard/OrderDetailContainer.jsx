@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { getOrderByID } from "../../../services/ordersService"
-import { OrderDetail } from "./OrderDetail"
+import { OrderDetail } from "./OrderDetail/OrderDetail"
 
 export const OrderDetailContainer = () => {
     const { id } = useParams()
