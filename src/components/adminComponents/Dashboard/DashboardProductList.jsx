@@ -1,4 +1,4 @@
-import { DashboardProduct } from "./DashboardProduct"
+import { DashboardProduct } from "../Dashboard/DashboardProduct/DashboardProduct.jsx"
 import "./Dashboard.css"
 
 export const DashboardProductList = ({ products, onDelete }) => {

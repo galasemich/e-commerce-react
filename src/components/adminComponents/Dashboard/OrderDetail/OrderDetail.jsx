@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import "./OrderDetail.css"
-import "./Dashboard.css"
+import "../Dashboard.css"
 
 export const OrderDetail = ({ totalUnits, total, books }) => {
     return (

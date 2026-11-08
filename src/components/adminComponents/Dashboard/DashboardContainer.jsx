@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { DashboardView } from "./DashboardView"
+import { DashboardView } from "./DashboardView/DashboardView.jsx"
 import { deleteProduct, getProductsByCategory } from "../../../services/productsService"
 import "./Dashboard.css"
 import { getOrders } from "../../../services/ordersService"

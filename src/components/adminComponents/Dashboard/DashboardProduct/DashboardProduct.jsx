@@ -1,4 +1,4 @@
-import "./Dashboard.css"
+import "../Dashboard.css"
 import "./DashboardProduct.css"
 import { Link } from "react-router-dom"
 

@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom"
 import "../adminComponents/Dashboard/Dashboard.css"
+import "../adminComponents/Dashboard/Dashboard.css"
 
 export const ProductSuccess = () => {
     const { id, action } = useParams()
@@ -14,6 +15,5 @@ export const ProductSuccess = () => {
                 <Link className="generic-button" to="/admin/dashboard">Volver al dashboard</Link>
             </div>
         </div>
-        
     )
 }
