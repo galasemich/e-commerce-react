@@ -2,10 +2,11 @@ import { useEffect, useState } from "react"
 import { DashboardView } from "./DashboardView"
 import { deleteProduct, getProductsByCategory } from "../../../services/productsService"
 import "./Dashboard.css"
-import { DashboardProduct } from "./DashboardProduct"
+import { getOrders } from "../../../services/ordersService"
 
 export const DashboardContainer = () => {
     const [ products, setProducts ] = useState([])
+    const [ orders, setOrders ] = useState([])
     const [ errors, setErrors ] = useState(null)
     const [ loading, setLoading ] = useState(true)
 
@@ -32,17 +33,24 @@ export const DashboardContainer = () => {
         })
     }, [])
 
+    useEffect(() => {
+        setErrors(null)
+        setLoading(true)
+
+        getOrders()
+        .then((data) => setOrders(data))
+        .catch((error) => {
+            setErrors(error.message)
+        })
+        .finally(() => {setLoading(false)})
+    }, [])
+
     if (loading) {return <p>Cargando productos...</p>}
     if (errors) {return <p>Se produjo un error al cargar los productos.</p>}
 
-    const length = products.length
-
     return (
         <section className="dashboard-container">
-            <DashboardView length={length}/>
-            {products.map((product) => (
-                <DashboardProduct {...product} key={product.id} onDelete={handleDelete}/>
-            ))}
+            <DashboardView products={products} orders={orders} onDelete={handleDelete}/>
         </section>
     )
 }

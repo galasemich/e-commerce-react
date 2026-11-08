@@ -10,6 +10,7 @@ import { ProtectedRoute } from './components/ProtectedRoute/ProtectedRoute'
 import { AdminLayout } from './layout/AdminLayout'
 import { DashboardContainer } from './components/adminComponents/Dashboard/DashboardContainer'
 import { ProductSuccess } from './components/adminComponents/ProductSuccess'
+import { OrderDetailContainer } from './components/adminComponents/Dashboard/OrderDetailContainer'
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
               <Route path="products/new" element={<ProductFormContainer/>}/>
               <Route path="products/edit-product/:id" element={<ProductFormContainer/>}/>
               <Route path="products/success/:action/:id" element={<ProductSuccess/>}/>
+              <Route path="orders/:id" element={<OrderDetailContainer />}/>
             </Route>
           </Routes>
     </>

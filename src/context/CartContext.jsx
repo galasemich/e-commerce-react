@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { createOrder } from "../services/ordersService";
 
 const CartContext = createContext()
 
@@ -43,7 +44,6 @@ export const CartProvider = ({ children }) => {
 
     const clearCart = () => {
         setCart([])
-        alert("Vaciaste tu carrito.")
     }
 
     const getTotalItems = () => {
@@ -57,6 +57,7 @@ export const CartProvider = ({ children }) => {
     }
 
     const checkout = () => {
+        createOrder(cart, getTotalItems, getCartTotal)
         alert("Realizaste tu compra con éxito.")
         clearCart()
         navigate("/")

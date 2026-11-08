@@ -7,13 +7,13 @@ export const ItemList = ({ products }) => {
         return <p>No hay libros para mostrar.</p>
     }
 
-    const books = <div className="product-list-container">
-        {products.map((product) => (
-            <Link to={`/product/${product.id}`} key={product.id}>
-                <Item {...product}/>
-            </Link>
-        ))}
-    </div>
-
-    return <>{books}</>
+    return (
+        <div className="product-list-container">
+            {products.map((product) => (
+                <Link to={`/product/${product.id}`} key={product.id}>
+                    <Item {...product}/>
+                </Link>
+            ))}
+        </div>
+    )
 }

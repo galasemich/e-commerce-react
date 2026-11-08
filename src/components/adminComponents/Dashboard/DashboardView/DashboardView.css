@@ -1,0 +1,42 @@
+.section{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.section:hover{
+    background-color:  #6a855f;
+}
+
+.length{
+    text-align: left;
+}
+
+.section-flex-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: left;
+    align-items: center;
+}
+
+.add-button{
+    background-color: #6a855f;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.add-button:hover{
+  opacity: 0.9;
+}
+
+.dashboard-header-title{
+    font-size: x-large;
+    text-align: left;
+}
+
+.text-left{
+    text-align: left;
+}

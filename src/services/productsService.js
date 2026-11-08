@@ -49,7 +49,6 @@ export const getCategories = async () => {
         const categories = snapshot.docs.map((doc) => {
             return { id: doc.id, ...doc.data() }
         })
-        console.log(categories)
         return categories
     } catch (error) {
         console.log("Error al traer las categorías:", error)
@@ -68,10 +67,10 @@ export const createProduct = async (product) => {
 }
 
 export const deleteProduct = async (id) => {
-    try{
+    try {
         const docRef = doc(productsRef, id)
         await deleteDoc(docRef)
-    }catch (error) {
+    } catch (error) {
         console.log("Se produjo un error al eliminar el producto:", error)
         throw error
     }
@@ -79,10 +78,10 @@ export const deleteProduct = async (id) => {
 }
 
 export const updateProduct = async (completeProduct, id) => {
-    try{
+    try {
         const docRef = doc(productsRef, id)
         await updateDoc(docRef, completeProduct)
-    }catch (error) {
+    } catch (error) {
         console.log("Se produjo un error al actualizar el producto:", error)
         throw error
     }

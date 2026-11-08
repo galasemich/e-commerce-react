@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import "./ProductFormContainer/ProductFormContainer.css"
 
-export const ProductFormUI = ({ product, errors, loading, onChange, onSubmit, onFileChange }) => {
+export const ProductFormUI = ({ product, categories, errors, loading, onChange, onSubmit, onFileChange }) => {
     const { id } = useParams()
 
     return (
@@ -54,12 +54,11 @@ export const ProductFormUI = ({ product, errors, loading, onChange, onSubmit, on
 
                 <div>
                     <label>Género:</label>
-                    <input
-                        type="text"
-                        name="category"
-                        value={product.category}
-                        onChange={onChange}
-                    />
+                    <select value={product.category} name="category" onChange={onChange}>
+                        {categories.map((cat) => (
+                            <option key={cat.id}>{cat.name}</option>
+                        ))}
+                    </select>
                 </div>
 
                 {errors.category && <p className="error">{errors.category}</p>}

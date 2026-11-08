@@ -1,0 +1,31 @@
+.order-detail{
+    display: flex;
+    flex-direction: column;
+    max-width: 24rem;
+    margin: 3rem auto;
+    padding: 1.5rem;
+    border: 1px solid #5a5a5a;
+    border-radius: 8px;
+    gap: 16px;
+    background-color: wheat
+}
+
+.book-titles{
+    border-radius: 8px;
+    border: 1px solid #5a5a5a;
+    background-color: #6a855f;
+    padding: 15px
+}
+
+.left-titles{
+    text-align: left;
+    margin: 5px;
+}
+
+.order-detail-button-container{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { ProductFormUI } from "../ProductFormUI"
 import { validateProduct } from "../../../../utils/validateProduct"
 import { uploadImage } from "../../../../services/uploadImage"
-import { createProduct, getProductsByID, updateProduct } from "../../../../services/productsService"
+import { createProduct, getCategories, getProductsByID, updateProduct } from "../../../../services/productsService"
 import { useNavigate, useParams } from "react-router-dom"
 
 export const ProductFormContainer = () => {
@@ -18,7 +18,14 @@ export const ProductFormContainer = () => {
     const [ file, setFile ] = useState(null)
     const [ errors, setErrors ] = useState([])
     const [ loading, setLoading ] = useState(false)
+    const [ categories, setCategories ] = useState([])
     const { id } = useParams()
+
+    useEffect(() => {
+        getCategories()
+        .then((data) => setCategories(data))
+        .catch((error) => setErrors(error))
+    }, [])
 
     if (id) {
         useEffect(() => {
@@ -31,6 +38,7 @@ export const ProductFormContainer = () => {
     const handleChange = (e) => {
         const { name, value } = e.target
         setProduct({...product, [name]: value})
+        console.log(product)
     }
 
     const handleImageFile = (e) => {
@@ -86,6 +94,7 @@ export const ProductFormContainer = () => {
     return (
         <ProductFormUI
         product={product}
+        categories={categories}
         errors={errors}
         loading={loading}
         onChange={handleChange}
