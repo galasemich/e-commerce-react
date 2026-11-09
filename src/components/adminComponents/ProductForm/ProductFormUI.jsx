@@ -55,6 +55,7 @@ export const ProductFormUI = ({ product, categories, errors, loading, onChange, 
                 <div>
                     <label>Género:</label>
                     <select value={product.category} name="category" onChange={onChange}>
+                        <option value="">--Seleccioná el género--</option>
                         {categories.map((cat) => (
                             <option key={cat.id}>{cat.name}</option>
                         ))}
