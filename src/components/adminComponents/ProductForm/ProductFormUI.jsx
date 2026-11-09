@@ -7,7 +7,7 @@ export const ProductFormUI = ({ product, categories, errors, loading, onChange, 
     return (
         <section>
             <form className="product-form" onSubmit={onSubmit}>
-                <h2>{id ? "Editar libro" : "Agregar un nuevo libro"}</h2>
+                <h1>{id ? "Editar libro" : "Agregar un nuevo libro"}</h1>
 
                 <div>
                     <label>Título:</label>
@@ -75,7 +75,7 @@ export const ProductFormUI = ({ product, categories, errors, loading, onChange, 
 
                 {errors.file && <p className="error">{errors.file}</p>}
 
-                <button className="generic-button">
+                <button type="submit" className="generic-button">
                     {loading ? "Cargando..." : "Guardar libro"}
                 </button>
 
