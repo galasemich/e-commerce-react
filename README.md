@@ -1,16 +1,26 @@
-# React + Vite
+# Descripción del proyecto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta aplicación web constituye el proyecto final para el curso *React.js* dictado por Talento Tech, programa que pertenece al Ministerio de Educación de la Ciudad de Buenos Aires. Se trata de un proyecto simulado y con fines únicamente educativos. 
 
-Currently, two official plugins are available:
+# Funcionalidades
+La aplicación, que simula el funcionamiento de una tienda online, permite:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- navegar por un catálogo de productos
+- añadir productos al carrito
+- simular una compra
+- ver detalles de cada producto
 
-## React Compiler
+Ingresando a /admin en la barra de navegación, se puede ingresar al panel de administración. Desde ese panel es posible:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- agregar productos nuevos
+- editar y eliminar productos existentes
+- ver listado de órdenes de compra con detalle incluido
 
-## Expanding the ESLint configuration
+# Stack de tecnologías
+- React.js para el frontend
+- Firebase/Firestore para backend as a service y base de datos
+- Despliegue en Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+Desarrollado por Gala Semich Alvarez. Licencia MIT.
