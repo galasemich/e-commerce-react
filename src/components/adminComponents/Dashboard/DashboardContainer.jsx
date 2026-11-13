@@ -3,6 +3,7 @@ import { DashboardView } from "./DashboardView/DashboardView.jsx"
 import { deleteProduct, getProductsByCategory } from "../../../services/productsService"
 import "./Dashboard.css"
 import { getOrders } from "../../../services/ordersService"
+import { toast } from "react-toastify"
 
 export const DashboardContainer = () => {
     const [ products, setProducts ] = useState([])
@@ -13,7 +14,12 @@ export const DashboardContainer = () => {
     const handleDelete = async (id) => {
         await deleteProduct(id)
         getProductsByCategory()
-        .then((data) => setProducts(data))
+        .then((data) => {
+            setProducts(data)
+            toast.success("Eliminaste el libro corrrectamente.", {
+                theme: "dark"
+            })
+        })
         .catch((error) => {
             setErrors(error.message)
         })

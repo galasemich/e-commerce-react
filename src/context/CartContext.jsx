@@ -1,6 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createOrder } from "../services/ordersService";
+import { toast } from "react-toastify"
 
 const CartContext = createContext()
 
@@ -33,13 +34,17 @@ export const CartProvider = ({ children }) => {
         } else {
             setCart([...cart, {...product, quantity}])
         }
-        alert(`Agregaste ${product.name} a tu carrito.`)
+        toast.success("Agregaste el libro a tu carrito.", {
+            theme: "dark"
+        })
     }
 
     const removeItem = (product) => {   
         const updatedCart = cart.filter((item) => item.id != product.id)
         setCart(updatedCart)
-        alert(`Eliminaste ${product.name} de tu carrito.`)
+        toast.success("Eliminaste el libro de tu carrito.", {
+            theme: "dark"
+        })
     }
 
     const clearCart = () => {
@@ -58,7 +63,9 @@ export const CartProvider = ({ children }) => {
 
     const checkout = () => {
         createOrder(cart, getTotalItems, getCartTotal)
-        alert("Realizaste tu compra con éxito.")
+        toast.success("Realizaste tu compra con éxito", {
+            theme: "dark"
+        })
         clearCart()
         navigate("/")
     }

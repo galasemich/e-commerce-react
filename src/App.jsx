@@ -11,6 +11,7 @@ import { AdminLayout } from './layout/AdminLayout'
 import { DashboardContainer } from './components/adminComponents/Dashboard/DashboardContainer'
 import { ProductSuccess } from './components/adminComponents/ProductSuccess'
 import { OrderDetailContainer } from './components/adminComponents/Dashboard/OrderDetailContainer'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
               <Route path="orders/:id" element={<OrderDetailContainer />}/>
             </Route>
           </Routes>
+          <ToastContainer />
     </>
   )
 }
