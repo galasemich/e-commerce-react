@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useAuth } from "../../context/AuthContext"
 import { useNavigate } from "react-router-dom"
 import { validateUser } from "../../utils/validateUser"
+import { toast } from "react-toastify"
 
 export const Login = () => {
     const { login } = useAuth()
@@ -33,6 +34,9 @@ export const Login = () => {
             console.log(userData)
             await login(userData.email, userData.password)
             navigate("/admin", { replace: true })
+            toast.success("Inicio de sesión correcto: bienvenidx de nuevo.", {
+                theme: "dark"
+            })
         }catch (error){
             console.log("Se produjo un error al iniciar sesión:", error)
         }
