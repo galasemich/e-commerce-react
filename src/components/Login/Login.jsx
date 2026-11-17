@@ -22,7 +22,6 @@ export const Login = () => {
         e.preventDefault()
 
         const userErrors = validateUser(userData)
-        console.log(userErrors)
 
         if (Object.keys(userErrors).length > 0){
             setErrors(userErrors)
@@ -38,7 +37,10 @@ export const Login = () => {
                 theme: "dark"
             })
         }catch (error){
-            console.log("Se produjo un error al iniciar sesión:", error)
+            console.log(error)
+            toast.error("Se produjo un error al iniciar sesión.", {
+                theme: "dark"
+            })
         }
     }
 
